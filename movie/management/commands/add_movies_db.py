@@ -17,7 +17,7 @@ class Command(BaseCommand):
         for i in range (100):
             movie = movies[i]
             exist = Movie.objects.filter(title = movie['title']).first()
-            if not exit:
+            if not exist:
                 Movie.objects.create(title = movie['title'],
                                      image = 'movie/images/default.jpg',
                                      genre = movie['genre'],
