@@ -24,7 +24,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',movieViews.home, name='home'),
-    path('about',movieViews.about, name='about'),
+    path('about/',movieViews.about, name='about'),  
+    path('signup/',movieViews.signup, name='signup'),  
     path('news/', include('news.urls')),
     
 ]
