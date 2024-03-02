@@ -10,7 +10,7 @@
   </form>
   <p>Searching for {{searchTerm}}</p>
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    {% for movie in movies %}
+    {% for movie in movies|slice:":50" %}
     <div class="col" v-for="movie in movies">
       <div class="card">
         <img src="{{ movie.image.url }}" class="card-img-top" alt="..." />
